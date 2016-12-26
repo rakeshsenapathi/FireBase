@@ -29,14 +29,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Firebase mChild = mRef.child("Name");
-        EditText name = (EditText) findViewById(R.id.name_edt);
-        String name_str = name.getText().toString();
-        if (!name_str.isEmpty()) {
-            mChild.setValue(name_str);
+        //Firebase mChild = mRef.child("Name");
+        EditText key = (EditText) findViewById(R.id.key_edt);
+        EditText value = (EditText) findViewById(R.id.value_edt);
+        String key_str = String.valueOf(key.getText());
+        String value_str = String.valueOf(value.getText());
+        if (!(key_str.isEmpty() && value_str.isEmpty())) {
+            Firebase mChild = mRef.child(key_str);
+            mChild.setValue(value_str);
             Toast.makeText(MainActivity.this, "Details Sent", Toast.LENGTH_SHORT).show();
-            name.setText(null);
-        } else if (name_str.isEmpty())
+            key.setText("");
+            value.setText("");
+        } else
             Toast.makeText(MainActivity.this, "Enter valid details", Toast.LENGTH_SHORT).show();
 
     }

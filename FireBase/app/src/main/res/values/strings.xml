@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">FireBase</string>
     <string name="sendData">Send the data</string>
-    <string name="name">Enter the name</string>
+    <string name="name">Enter key</string>
 </resources>

@@ -1,19 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B2EBF2">
-
-    <Button
-        android:id="@+id/sendBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
-        android:text="@string/sendData" />
+    android:background="#9E9E9E">
 
     <EditText
-        android:id="@+id/name_edt"
+        android:id="@+id/key_edt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -25,5 +16,28 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Value"
+        android:textColorHint="@android:color/black"
+        android:id="@+id/value_edt"
+        android:textAlignment="center"
+        android:layout_below="@+id/key_edt"
+        android:layout_marginTop="17dp"
+        android:layout_alignRight="@+id/key_edt"
+        android:layout_alignEnd="@+id/key_edt"
+        android:layout_alignLeft="@+id/key_edt"
+        android:layout_alignStart="@+id/key_edt" />
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/sendData"
+        android:layout_below="@+id/value_edt"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
