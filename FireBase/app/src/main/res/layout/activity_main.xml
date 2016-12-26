@@ -40,4 +40,13 @@
         android:layout_below="@+id/value_edt"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:text="Receive data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:id="@+id/receivebtn"
+        android:layout_below="@+id/sendBtn"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
