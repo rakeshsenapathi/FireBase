@@ -27,6 +27,7 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,8 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() != null){
-                      startActivity(new Intent(AuthActivity.this,AccountActivity.class));
+                if (firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(AuthActivity.this, AccountActivity.class));
                 }
             }
         };
@@ -52,7 +53,7 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-          startsignin();
+        startsignin();
 
 
     }
@@ -68,13 +69,10 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
         String email = mEmailField.getText().toString();
         String password = mPwdField.getText().toString();
 
-        if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
 
-            Toast.makeText(AuthActivity.this,"Fields are Empty", Toast.LENGTH_SHORT).show();
-        }
-
-
-        else {
+            Toast.makeText(AuthActivity.this, "Fields are Empty", Toast.LENGTH_SHORT).show();
+        } else {
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
