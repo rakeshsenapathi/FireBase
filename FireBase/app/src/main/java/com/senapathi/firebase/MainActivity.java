@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Firebase.setAndroidContext(this); // set the Firebase context to the application context to use anywhere
 
         mRef = new Firebase("https://fir-a3c8a.firebaseio.com/");
         Button send_button = (Button) findViewById(R.id.sendBtn);

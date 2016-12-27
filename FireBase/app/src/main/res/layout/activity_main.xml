@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter Value"
+        android:textColor="@android:color/black"
         android:textColorHint="@android:color/black"
         android:id="@+id/value_edt"
         android:textAlignment="center"
