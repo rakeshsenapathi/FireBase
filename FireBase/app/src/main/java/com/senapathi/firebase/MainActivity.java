@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, "Enter valid details", Toast.LENGTH_SHORT).show();
             break;
             case R.id.receivebtn:
-                Intent intent = new Intent(MainActivity.this,DisplayActivity.class);
+                Intent intent = new Intent(MainActivity.this,AuthActivity.class);
                 startActivity(intent);
                 break;
         }
